@@ -30,15 +30,15 @@ test log
 ========
 (testing employee)
 
-test        description                         expected                    result
-====        ===========                         ========                    ======
-1(coverage) r:10,t:1,h:30                       300
-2(coverage) r:10,t:1,h:50                       400+200=600
+test        description                         expected                        result
+====        ===========                         ========                        ======
+1(coverage) r:10,t:1,h:30                       300                             300
+2(coverage) r:10,t:1,h:50                       400+200=600                     600
 
-3(boundary) r:10,t:1,h:39,40,41                 ot only for 41
+3(boundary) r:10,t:1,h:39,40,41                 ot only for 41                  390,400,420
 
-4(extreme)  r:10,t:1,h:0,168                    hours not set
+4(extreme)  r:10,t:1,h:0,168                    hours not set                   not set up
 
-5(boundary) r:6.49,6.50,30.50,30.51,t:1,h:10    rate only set for 2 and 3
-6(boundary) r:10,t:1,h:0,1,60,61                hours set only for 2 and 3
-5(boundary) r:10,t:0,1,2,3,h:45                 type only set for 2 and 3
+5(boundary) r:6.74,6.75,30.50,30.51,t:1,h:10    rate only set for 2 and 3       rates only for 2 and 3 - 67.50 & 305.00
+6(boundary) r:10,t:1,h:0,1,60,61                hours set only for 2 and 3      hours only for 1 and 2 - 10.00 & 800.00
+5(boundary) r:10,t:0,1,2,3,h:45                 type only set for 2 and 3       types 1 and 2 only worked - 500 & 450.00

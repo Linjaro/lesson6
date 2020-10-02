@@ -24,21 +24,24 @@ public class Employee {
     }
     public boolean setType(int t){
         boolean oneortwo= (t==1 ||t==2);
-        if (!oneortwo){
+        if (oneortwo){
+            type = t;
             return true;
         }
         else{
-            type = t;
+            
             return false;
         }
     }
     public boolean setRate(double rt){
-        boolean rtok= (rt>=6.75 ||rt<=30.50);
+        boolean rtok= (rt>=6.75 &&rt<=30.50);
         if (rtok){
+            rate = rt;
             return true;
+            
         }
         else{
-            rate = rt;
+            
             return false;
         }
     }
@@ -46,10 +49,11 @@ public class Employee {
     public boolean setHours(double hrs){
         boolean ok= (hrs >=1 && hrs <=60);
         if (ok){
+            hours =hrs;
             return true;
         }
         else{
-            hours =hrs;
+            
             return false;
         }
     }
