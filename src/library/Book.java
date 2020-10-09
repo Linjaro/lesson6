@@ -17,6 +17,6 @@ public class Book {
     return author;
     }
     public String toString(){
-        return ("Author: "+author+"\nTitle: "+title);
+        return ("\n\nTitle: "+title+"\nAuthor: "+author);
     }
 }

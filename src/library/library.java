@@ -29,7 +29,7 @@ public class library {
         System.out.println(b4);
         System.out.println(b5);
         Patron p = new Patron ("Miles Davis");
-        System.out.println("Lending 4 books to" +p.getName());
+        System.out.println("\n\nLending 4 books to" +p.getName());
         if (p.borrow(b1))       System.out.println(b1.getTitle()+" successfully barrowed.");
         else                    System.out.println(b1.getTitle()+" could not be borrowed.");
         if (p.borrow(b2))       System.out.println(b2.getTitle()+" successfully barrowed.");
@@ -39,7 +39,7 @@ public class library {
         if (p.borrow(b4))       System.out.println(b4.getTitle()+" successfully barrowed.");
         else                    System.out.println(b4.getTitle()+" could not be borrowed.");
         
-        System.out.println("------------------------------\nAttempting to return the firs book:\n------------------------------");
+        System.out.println("------------------------------\nAttempting to return the first book:\n------------------------------");
         if (p.returnBook(b1)) System.out.println (b1.getTitle() + " successfully returned.");
         else System.out.println (b1.getTitle() + " was not borrowed out.");
         System.out.println ("----\nHere is a list of books currently lent to " + p.getName()+"\n---"); 
